@@ -37,9 +37,9 @@ RUN mkdir /qdd && mkdir /blast_databases
 RUN cd /qdd && \
     wget http://net.imbe.fr/~emeglecz/QDDweb/QDD-3.1.2/QDD-3.1.2_example4.tar.gz -O /qdd/QDD-3.1.2_example4.tar.gz && \
     tar xfz QDD-3.1.2_example4.tar.gz && \
-	mkdir example
-	mv data_example4/example4.fastq example/example4.fastq
-	mkdir output
+	mkdir example && \
+	mv data_example4/example4.fastq example/example4.fastq && \
+	mkdir output && \
 	rm -rf /qdd/QDD-3.1.2_example4.tar.gz data_example4
 
 WORKDIR /qdd
