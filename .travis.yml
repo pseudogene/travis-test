@@ -7,7 +7,7 @@ services:
 install:
 - docker build -t test-docker .
 script:
-- docker run -it test-docker /bin/bash -c "./test.sh"
+- docker run -it test-docker /usr/bin/perl /usr/local/share/qdd/QDD.pl -input_folder /qdd/example -out_folder /qdd/output -fastq 1 -check_contamination 1
 notifications:
   slack:
     secure: I7ZNKxHub1D4DW+g/qNbzsutDdMzt/ydh2GPLpVBD/sPZfKCydEdyrheEHrls8ryQlV8t16ZApOOtFCIqkJvFt+9Q087vr8Szq9OFWiXSU+g2X5kBzpGniZ37z0a792T0/eQQf67YNisVOknkfI5fdoDnrYsvTt+hxNfnsyOjbzt/uOr+WfGejqvH7HyvJjipFf4a/EGqZcGgjP4/YIwdZwYvsoXpNbf+xqOKLyqcAwTHs3R50bDmtcDp9D6qxL0woqlgUg/9G29K5fdulXeL++qxKhI+lMdjAI2XofxSURA/H1GLcN7/g92KVpfkY5ZScaZmqmNHnjpfIzJeyZY6RgUL7is/c+JN+oUhj3A+phNhN6UftTuwVQrSNOtWCWg81By2FRejZPQp+CnbQsJKB1R7QLseOxeTXPGyATP0W8aZksPjC0WC8DCDtmRJEe/vv9vRMj0AgM1kZi3xs/9UXfpF6GMd8nhLq7A5AhtAiJFbBTT6gCUMtwpCNYAQ+qsHBAO4EHObezogXMj73bsktdwKynG6ign/PmSM286/sOfph4mJmcq8MMZ7JM49akRBPInYjzsKMRGPTzTceVh14UqXpgAiz0pA7OnHDhLabPCrxFZo96dgv3i1ZWSPmK6RRYnwoVKEIgk+99wqxvAzDd1uuci+NoAIzkrzurftfw=
